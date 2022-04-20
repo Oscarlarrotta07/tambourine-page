@@ -1,17 +1,18 @@
 {
   "name": "tambourine-test",
   "version": "1.0.0",
-  "description": "Prueba Front tambourine",
+  "description": "tambourine test front end",
   "scripts": {
     "compile_pug": "gulp compilePug",
     "watch_pug": "gulp watchPug",
     "compile_sass": "gulp compileStyles",
     "watch_sass": "gulp watchStyles",
+    "watch_js": "gulp watchJs",
     "serve": "http-server ./build"
   },
   "keywords": [
     "Front end",
-    "prueba"
+    "test"
   ],
   "author": "Oscar Larrotta",
   "license": "ISC",
@@ -19,8 +20,12 @@
     "gulp": "^4.0.2",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-uglify": "^3.0.2",
     "pug": "^3.0.2",
     "sass": "^1.50.1",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
   }
 }

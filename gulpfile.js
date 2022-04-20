@@ -3,6 +3,8 @@ const pug = require("gulp-pug");
 const fs = require("fs");
 const files = ["data"];
 const sass = require("gulp-sass")(require("sass"));
+const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
 
 function compilePug() {
   const data = files.reduce((acc, item) => {
@@ -45,7 +47,24 @@ function watchStyles() {
   );
 }
 
+function compileJs() {
+  return gulp
+    .src("./source/js/main.js")
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(uglify())
+    .pipe(gulp.dest("./build/js"));
+}
+
+function watchJs() {
+  gulp.watch(["source/js/main.js"], { ignoreInitial: false }, compileJs);
+}
+
 exports.compilePug = compilePug;
 exports.watchPug = watchPug;
 exports.compileStyles = compileStyles;
 exports.watchStyles = watchStyles;
+exports.watchJs = watchJs;
