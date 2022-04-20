@@ -5,6 +5,8 @@
   "scripts": {
     "compile_pug": "gulp compilePug",
     "watch_pug": "gulp watchPug",
+    "compile_sass": "gulp compileStyles",
+    "watch_sass": "gulp watchStyles",
     "serve": "http-server ./build"
   },
   "keywords": [
@@ -16,7 +18,9 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "pug": "^3.0.2",
+    "sass": "^1.50.1",
     "serve": "^13.0.2"
   }
 }

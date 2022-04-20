@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const fs = require("fs");
 const files = ["data"];
+const sass = require("gulp-sass")(require("sass"));
 
 function compilePug() {
   const data = files.reduce((acc, item) => {
@@ -29,6 +30,22 @@ function watchPug() {
   );
 }
 
+function compileStyles() {
+  return gulp
+    .src("./source/sass/**/!(_)*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("./build/css"));
+}
+
+function watchStyles() {
+  gulp.watch(
+    ["source/sass/**/*.scss"],
+    { ignoreInitial: false },
+    compileStyles
+  );
+}
 
 exports.compilePug = compilePug;
 exports.watchPug = watchPug;
+exports.compileStyles = compileStyles;
+exports.watchStyles = watchStyles;
