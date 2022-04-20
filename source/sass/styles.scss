@@ -1,0 +1,16 @@
+@import "components/variables","components/mixins","components/footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.wrapper{
+    max-width: $maxWith;
+    margin: 0 auto;
+}
+
+.bg-gray{
+    background-color: $bg-gray;
+}

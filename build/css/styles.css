@@ -1,0 +1,30 @@
+.footer {
+  padding: 16px;
+}
+.footer__content {
+  text-align: center;
+}
+.footer__text {
+  margin-bottom: 8px;
+}
+@media (min-width:1000px) {
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.bg-gray {
+  background-color: #F1F2F2;
+}
