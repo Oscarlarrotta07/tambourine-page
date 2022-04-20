@@ -1,0 +1,22 @@
+{
+  "name": "tambourine-test",
+  "version": "1.0.0",
+  "description": "Prueba Front tambourine",
+  "scripts": {
+    "compile_pug": "gulp compilePug",
+    "watch_pug": "gulp watchPug",
+    "serve": "http-server ./build"
+  },
+  "keywords": [
+    "Front end",
+    "prueba"
+  ],
+  "author": "Oscar Larrotta",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2",
+    "serve": "^13.0.2"
+  }
+}
