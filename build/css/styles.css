@@ -66,6 +66,23 @@
   width: 100%;
 }
 
+.hero {
+  background-color: #000000;
+  text-align: center;
+  padding: 0 24px 16px;
+  color: #ffffff;
+}
+.hero__title {
+  padding: 16px 0;
+  font-size: 28px;
+  border-top: 2px solid #ffffff;
+  white-space: pre-wrap;
+}
+.hero__title .hero__subtitle {
+  display: block;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -2,10 +2,13 @@ include components/_meta
 
 +meta() 
 body
+    +hero(data.hero)
     +content(data.content)
     .events
         .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
         each event in data.events 
             +event(event)
     +footer(data.footer)
+    +scripts()
+
     

@@ -1,4 +1,4 @@
-@import "components/variables","components/mixins","components/footer","components/event","components/content";
+@import "components/variables","components/mixins","components/footer","components/event","components/content","components/hero";
 
 * {
     margin: 0;
@@ -20,6 +20,6 @@
     
     .title{
         text-align: center;
-        padding: 20px 0;
+        padding: size(2.5) 0;
     }
 }
