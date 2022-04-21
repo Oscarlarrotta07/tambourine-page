@@ -1,4 +1,26 @@
 {
+    "events": [
+        {
+            "day": "1",
+            "month": "ene",
+            "background": "/images/event1.jpg"
+        },
+        {
+            "day": "2",
+            "month": "oct",
+            "background": "/images/event2.jpg"
+        },
+        {
+            "day": "23",
+            "month": "nov",
+            "background": "/images/event3.jpg"
+        },
+        {
+            "day": "24",
+            "month": "dic",
+            "background": "/images/event4.jpg"
+        }
+    ],
     "footer": {
         "direccion": "390 congress St. (at Congress & Exchange Streets), Portiand Maine  . Map",
         "adress": "(207)653.9990 . info@portiandpresshotel.com "

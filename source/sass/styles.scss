@@ -1,4 +1,4 @@
-@import "components/variables","components/mixins","components/footer";
+@import "components/variables","components/mixins","components/footer","components/event";
 
 * {
     margin: 0;
@@ -13,4 +13,13 @@
 
 .bg-gray{
     background-color: $bg-gray;
+}
+
+.events{
+    // display: flex;
+    
+    .title{
+        text-align: center;
+        padding: 20px 0;
+    }
 }

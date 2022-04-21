@@ -1,0 +1,32 @@
+.event{
+    display: flex;
+    justify-content: center;
+    margin-bottom: size(2);
+
+    &__img{
+        width: 239px;
+        height: 174px;
+        background-size: 100%;
+
+    }
+
+    &__date{
+        margin-top: 1px;
+        width: 95px;
+        height: 55px;
+        background: $black;
+        color: $white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .day{
+        font-size: 50px;
+
+    }
+    .month{
+        font-size: 14px;
+        transform: rotatez(-450deg);
+    }
+}
