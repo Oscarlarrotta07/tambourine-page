@@ -42,6 +42,30 @@
   transform: rotatez(-450deg);
 }
 
+.service {
+  padding: 24px 16px;
+}
+.service__seccion {
+  padding: 16px 0;
+  text-align: center;
+}
+.service__title {
+  padding: 8px 0;
+}
+.service__description {
+  padding: 16px 0;
+}
+.service__btn {
+  color: #E21F25;
+  border: 1px solid #E21F25;
+  padding: 8px 16px;
+  width: 40%;
+  margin-bottom: 16px;
+}
+.service__img {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;

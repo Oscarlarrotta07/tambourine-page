@@ -2,6 +2,7 @@ include components/_meta
 
 +meta() 
 body
+    +content(data.content)
     .events
         .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
         each event in data.events 

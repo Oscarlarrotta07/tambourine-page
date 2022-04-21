@@ -1,0 +1,9 @@
+mixin content(data)
+    .service.bg-gray 
+        .service__content 
+            h3.service__seccion=data.seccion
+            h2.service__title=data.title
+            p.service__description=data.description
+            button.service__btn=data.btn
+        figure.service__figure 
+            img.service__img(src=data.image, alt="image-service")

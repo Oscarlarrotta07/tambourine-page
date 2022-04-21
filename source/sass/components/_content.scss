@@ -1,0 +1,28 @@
+.service{
+    padding: size(3) size(2);
+    
+    &__seccion{
+        padding: size(2) 0;
+        text-align: center;
+    }
+
+    &__title{
+        padding: size(1) 0;
+    }
+
+    &__description{
+        padding: size(2) 0;
+    }
+
+    &__btn{
+        color: $red;
+        border: 1px solid $red;
+        padding: size(1) size(2);
+        width: 40%;
+        margin-bottom: size(2);
+    }
+
+    &__img{
+        width: 100%;
+    }
+}
