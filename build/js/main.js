@@ -1,1 +1,1 @@
-"use strict";
+"use strict";!function(){var t=document.querySelectorAll(".slide"),n=(t.forEach(function(t,n){t.style.transform="translateX(".concat(100*n,"%)")}),document.querySelector(".btn-next")),e=0,c=t.length-1;function r(){e===c?e=0:e++,t.forEach(function(t,n){t.style.transform="translateX(".concat(100*(n-e),"%)")})}n.addEventListener("click",function(){e===c?e=0:e++,t.forEach(function(t,n){t.style.transform="translateX(".concat(100*(n-e),"%)")})}),document.querySelector(".btn-prev").addEventListener("click",function(){r()}),setInterval(r,8e3)}();

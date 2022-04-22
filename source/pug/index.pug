@@ -2,8 +2,9 @@ include components/_meta
 
 +meta() 
 body
+    +slider()
     +hero(data.hero)
-    +content(data.content)
+    +card(data.card)
     .events
         .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
         each event in data.events 
