@@ -85,7 +85,6 @@
 
 .slider {
   width: 100%;
-  max-width: 800px;
   height: 350px;
   position: relative;
   overflow: hidden;
@@ -136,6 +135,50 @@
 .btn-next {
   top: 45%;
   right: 2%;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 104px;
+  text-align: center;
+  z-index: 1;
+  max-width: 1080px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.header__logo {
+  z-index: 2;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: -webkit-fill-available;
+  width: 100%;
+  text-align: center;
+}
+.header::before {
+  content: "PORTLAND, MAINE";
+  content: "PORTLAND, MAINE";
+  z-index: 111111;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 12px;
+}
+.header::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  opacity: 0.8;
 }
 
 * {
