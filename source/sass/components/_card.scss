@@ -31,4 +31,31 @@
     &__img{
         width: 100%;
     }
+
+    
 }
+@media ($mediaMin) {
+    .card{
+        display: flex;
+        align-items: center;
+        
+        &__content{
+            width: 100%;
+            padding: 0 size(3);
+        }
+    }
+}
+
+@media ($mediaLarge) {
+    .card{
+        display: flex;
+        align-items: center;
+        padding: size(8) 0;
+        
+        &__img{
+            width: 620px;
+        }
+    }
+}
+
+

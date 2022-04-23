@@ -3,8 +3,8 @@ let interval = null;
     class Slider {
         constructor() {
             this.slidesEl = document.querySelectorAll(".slide");
-            this.prevSlideEl = document.querySelector(".btn-prev");
-            this.nextSlideEl = document.querySelector(".btn-next");
+            this.prevSlideEl = document.querySelector(".btn__prev");
+            this.nextSlideEl = document.querySelector(".btn__next");
             this.currentSlide = 0;
             this.maxSlide = this.slidesEl.length - 1;
             this.slidesEl.forEach((slide, index) => {

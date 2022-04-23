@@ -39,3 +39,17 @@
         align-items: center;
     }
 }
+
+@media ($mediaMin) {
+    .event{
+        
+
+        &__list{
+            display: flex;
+            gap: size(5);
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

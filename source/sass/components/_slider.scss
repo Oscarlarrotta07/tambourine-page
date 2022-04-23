@@ -36,20 +36,28 @@
       top: 0;
       left: 0;
     }
+
+    &__prev{
+      top: 45%;
+      left: 2%;
+    }
+
+    &__next{
+      top: 45%;
+      right: 2%;
+    }
   }
   .btn:active {
     transform: scale(1.1);
   }
-  .btn-prev {
-    top: 45%;
-    left: 2%;
 
+  @media ($mediaLarge) {
     
-  }
-  
-  .btn-next {
+    .slider {
+      height: 800px;
 
-    top: 45%;
-    right: 2%;
-  }
-  
+    }
+    .slide{
+      height: 800px;
+    }
+}

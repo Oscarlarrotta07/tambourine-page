@@ -4,12 +4,8 @@
     @return ($value * 8) + px;
   }
 
-@function fontSize($value: 1) {
-  @return ($value * 8);
-}  
-
-@function rem($valuepixel: 1) {
-  @return math.div($valuepixel, 16) + rem;
+@function ptToRem($valuepixel: 1) {
+  @return math.div(($valuepixel*1.3), 16) + rem;
 }
 
 @mixin montRegular() {

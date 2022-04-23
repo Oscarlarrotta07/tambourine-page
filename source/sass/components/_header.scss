@@ -49,3 +49,16 @@
 
     
 }
+
+@media ($mediaLarge) {
+    
+    .header {
+        height: size(26);
+        margin-top: size(6);
+
+        &::after{
+            height: 100px;
+    
+          }
+    }
+}
