@@ -1,95 +1,106 @@
+let interval = null;
 (function () {
-
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${index * 100}%)`;
-    });
-    const nextSlide = document.querySelector(".btn-next");
-    let currentSlide = 0;
-    let maxSlide = slides.length - 1;
-
-    nextSlide.addEventListener("click", function () {
-        if (currentSlide === maxSlide) {
-            currentSlide = 0;
-        } else {
-            currentSlide++;
+    class Slider {
+        constructor() {
+            this.slidesEl = document.querySelectorAll(".slide");
+            this.prevSlideEl = document.querySelector(".btn-prev");
+            this.nextSlideEl = document.querySelector(".btn-next");
+            this.currentSlide = 0;
+            this.maxSlide = this.slidesEl.length - 1;
+            this.slidesEl.forEach((slide, index) => {
+                slide.style.transform = `translateX(${index * 100}%)`;
+            });
+            this.intervalTime = 8000;
+            this.nextSlideAuto = this.nextSlideAuto.bind(this);
+            this.prevSlideAuto = this.prevSlideAuto.bind(this);
+            this.addEvents();
+            this.setIntervals();
         }
 
-        slides.forEach((slide, index) => {
-            slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
-        });
-    });
-
-    const prevSlide = document.querySelector(".btn-prev");
-    prevSlide.addEventListener("click", function () {
-        nextSlideAuto();
-    });
-
-    function nextSlideAuto() {
-        if (currentSlide === maxSlide) {
-            currentSlide = 0;
-        } else {
-            currentSlide++;
+        nextSlideAuto() {
+            const self = this;
+            if (this.currentSlide === this.maxSlide) {
+                this.currentSlide = 0;
+            } else {
+                this.currentSlide++;
+            }
+            this.slidesEl.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - self.currentSlide)}%)`;
+            });
         }
 
-        slides.forEach((slide, index) => {
-            slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
-        });
+        prevSlideAuto() {
+            const self = this;
+            if (this.currentSlide === 0) {
+                this.currentSlide = this.maxSlide;
+            } else {
+                this.currentSlide--;
+            }
+            this.slidesEl.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - self.currentSlide)}%)`;
+            });
+        }
+        addEvents() {
+            this.nextSlideEl.addEventListener("click", this.nextSlideAuto);
+            this.prevSlideEl.addEventListener("click", this.prevSlideAuto);
+        }
+        setIntervals() {
+            if (interval) {
+                clearInterval(interval);
+            }
+            interval = setInterval(this.nextSlideAuto, this.intervalTime);
+        }
     }
+    class Form {
+        constructor() {
+            this.formEl = document.getElementById('form');
+            this.btnTabEl = document.getElementById('form-tab');
+            this.bodyEl = document.getElementById('body');
+            this.btnCloseEl = document.getElementById('form-close');
+            this.arrivalEl = document.getElementById("arrival");
+            this.departureEl = document.getElementById("departure");
+            this.toggleForm = this.toggleForm.bind(this);
+            this.addEvents()
+            this.setMinimums()
 
-    setInterval(nextSlideAuto, 8000);
-
-    //form
-    const form = document.getElementById('form');
-    const btnTab = document.getElementById('form-tab');
-    const body = document.getElementById('body');
-    const btnClose = document.getElementById('form-close');
-
-    btnTab.addEventListener('click', () => {
-        toggleForm();
-    });
-
-    btnClose.addEventListener('click', () => {
-        toggleForm();
-
-    });
-
-    function toggleForm() {
-        form.classList.toggle('show');
-        body.classList.toggle('disabledScroll');
-    }
-
-    function getMinDate(days) {
-        let today = new Date();
-        let date = today.getDate() + days;
-        let month = today.getMonth() + 1;
-        const year = today.getFullYear();
-
-        if (date < 10) {
-            date = '0' + date
         }
 
-        if (month < 10) {
-            month = '0' + month
+        setMinimums() {
+            this.arrivalEl.setAttribute("min", this.getMinDate(0));
+            this.departureEl.setAttribute("min", this.getMinDate(1));
         }
 
-        today = year + '-' + month + '-' + date;
+        submit() {
+            console.log('oscar');
+            return false
+        }
 
-        return today
+
+        addEvents() {
+            this.btnTabEl.addEventListener('click', this.toggleForm);
+            this.btnCloseEl.addEventListener('click', this.toggleForm);
+            this.formEl.onsubmit = this.submit;
+        }
+
+        toggleForm() {
+            this.formEl.classList.toggle('show');
+            this.bodyEl.classList.toggle('disabledScroll');
+        }
+
+        getMinDate(days) {
+            let today = new Date();
+            let date = today.getDate() + days;
+            let month = today.getMonth() + 1;
+            const year = today.getFullYear();
+            if (date < 10) {
+                date = '0' + date
+            }
+            if (month < 10) {
+                month = '0' + month
+            }
+            return year + '-' + month + '-' + date;
+        }
     }
-
-    document.getElementById("arrival").setAttribute("min", getMinDate(0));
-    document.getElementById("departure").setAttribute("min", getMinDate(1));
-
-    // submit form    
-    form.onsubmit = submit;
-    function submit() {
-        console.log('oscar');
-        return false
-    }
-
-
+    const form = new Form()
+    const slider = new Slider()
 })();
-
-
-
