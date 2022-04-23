@@ -12,6 +12,8 @@
         padding: size();
         color: $red;
         font-size: size(3);
+        background-color: $black;
+        border: none;
     }
 
     &__title{
@@ -21,7 +23,7 @@
 
     &__content{
         max-height: 0;
-        transition: max-height 0.5s ease-out;
+        transition: max-height 0.3s ease-out;
         background: $black;
         color: $white;
         position: relative;
@@ -89,6 +91,12 @@
             border: 2px solid $red;
             color: $red;
         }
+
+        &-tab{
+            padding: size(4) 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
     }
 
     &__link{
@@ -104,13 +112,17 @@
         }
     }
 
+    &__succesful{
+
+        text-align: center;
+        padding: size(4) 0;
+    }
     
 }
 
 .form.show{
 
     .form__content{
-        // transition: height auto 3s;
         max-height: 600px;
         transition: max-height 0.5s ease-in;
         padding: size(2) size(4);

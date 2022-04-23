@@ -59,26 +59,36 @@ let interval = null;
             this.btnCloseEl = document.getElementById('form-close');
             this.arrivalEl = document.getElementById("arrival");
             this.departureEl = document.getElementById("departure");
+            this.formInputsEl = document.getElementById("form-inputs")
+            this.formsuccesfulEl = document.getElementById("form-succesful")
+            this.setMinDeparture = this.setMinDeparture.bind(this);
             this.toggleForm = this.toggleForm.bind(this);
+            this.submit = this.submit.bind(this);
+            this.minDeparture = 0;
             this.addEvents()
             this.setMinimums()
 
         }
 
         setMinimums() {
-            this.arrivalEl.setAttribute("min", this.getMinDate(0));
-            this.departureEl.setAttribute("min", this.getMinDate(1));
+            this.arrivalEl.setAttribute("min", this.getMinDate());
         }
 
         submit() {
-            console.log('oscar');
+            this.formInputsEl.classList.add('displayNone');
+            this.formsuccesfulEl.classList.remove('displayNone');
             return false
+        }
+
+        setMinDeparture() {
+            this.departureEl.setAttribute("min", this.arrivalEl.value)
         }
 
 
         addEvents() {
             this.btnTabEl.addEventListener('click', this.toggleForm);
             this.btnCloseEl.addEventListener('click', this.toggleForm);
+            this.arrivalEl.addEventListener('blur', this.setMinDeparture);
             this.formEl.onsubmit = this.submit;
         }
 
@@ -87,9 +97,9 @@ let interval = null;
             this.bodyEl.classList.toggle('disabledScroll');
         }
 
-        getMinDate(days) {
+        getMinDate() {
             let today = new Date();
-            let date = today.getDate() + days;
+            let date = today.getDate();
             let month = today.getMonth() + 1;
             const year = today.getFullYear();
             if (date < 10) {
@@ -100,6 +110,8 @@ let interval = null;
             }
             return year + '-' + month + '-' + date;
         }
+
+
     }
     const form = new Form()
     const slider = new Slider()

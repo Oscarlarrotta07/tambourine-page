@@ -12,7 +12,7 @@
   src: url("./fonts/Montserrat_Font/Montserrat-SemiBold.ttf") format("ttf");
 }
 .footer {
-  padding: 32px 16px;
+  padding: 32px 16px 96px;
 }
 .footer__content {
   text-align: center;
@@ -239,6 +239,8 @@
   padding: 8px;
   color: #E21F25;
   font-size: 24px;
+  background-color: #282930;
+  border: none;
 }
 .form__title {
   text-align: center;
@@ -246,7 +248,7 @@
 }
 .form__content {
   max-height: 0;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.3s ease-out;
   background: #282930;
   color: #ffffff;
   position: relative;
@@ -300,6 +302,11 @@
   border: 2px solid #E21F25;
   color: #E21F25;
 }
+.form__button-tab {
+  padding: 32px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
 .form__link {
   text-align: center;
 }
@@ -309,6 +316,10 @@
 }
 .form__link svg {
   margin-left: 8px;
+}
+.form__succesful {
+  text-align: center;
+  padding: 32px 0;
 }
 
 .form.show .form__content {
@@ -367,4 +378,8 @@
 
 .text__center {
   text-align: center;
+}
+
+.displayNone {
+  display: none;
 }
