@@ -1,5 +1,48 @@
-
+@use "sass:math";
 
 @function size($value: 1) {
     @return ($value * 8) + px;
   }
+
+@function fontSize($value: 1) {
+  @return ($value * 8);
+}  
+
+@function rem($valuepixel: 1) {
+  @return math.div($valuepixel, 16) + rem;
+}
+
+@mixin montRegular() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+@mixin montMedium() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+@mixin montSemi() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+@mixin montBold() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@mixin playRegular() {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+}
+
+@mixin playSemi() {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 600;
+}
+
+@mixin playBold() {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 700;
+}

@@ -9,7 +9,7 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                 .form__group 
                     label.form__label(for="arrival")=arrival 
                     .position__relative
-                        input#date.form__input.form__input-date(type="text"  placeholder="Thurs, November")
+                        input#arrival.form__input.form__input-date(type="date"  min="" required)
                         span.form__icon 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17" viewBox="0 0 16 17">
                                 <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="16" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAABI0lEQVQ4jZWT0U3DQBBEX1D+oQP8xXfowK4AqMChA1wBooKICuISoII4FWA6sEQD7iBopdloYiyFjGQ5t3cZz8zuLX5u7xBugA1QAD3QcIo1UAMj8Kw3S6DUsQfgEWiBF+AbGIxiq71Sv9+jGAoOdqgDKuDAPCoRvObuld6x8Tb5S9QWeiqrX9uHjgTId7B/ae3yO3neyt4+N5Z26AN4AlYK0AkC9wpysCz+ZHAxUkEjC5cglG4yg17SSs1Bp6dQLddoPeQHPcRC7amtVnvLrIXFXIi9WjNardGEJlop6WXhhGA0mU7qGKbdcQvBuNN9SGxUS6y1Xs1ZCKl5L5zUaxnq0VbOQXifyj+HINqFghzR6eSdQ6gbgiBGNK6xp/0ffALtL+uRRWwo8DzAAAAAAElFTkSuQmCC"/>
@@ -17,7 +17,7 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                 .form__group 
                     label.form__label(for="departure")=departure
                     .position__relative
-                        input.form__input.form__input-date(type="date" id="departure" placeholder="Sat, December 1")
+                        input#departure.form__input.form__input-date(type="date"   required)
                         span.form__icon 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17" viewBox="0 0 16 17">
                                 <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="16" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAABI0lEQVQ4jZWT0U3DQBBEX1D+oQP8xXfowK4AqMChA1wBooKICuISoII4FWA6sEQD7iBopdloYiyFjGQ5t3cZz8zuLX5u7xBugA1QAD3QcIo1UAMj8Kw3S6DUsQfgEWiBF+AbGIxiq71Sv9+jGAoOdqgDKuDAPCoRvObuld6x8Tb5S9QWeiqrX9uHjgTId7B/ae3yO3neyt4+N5Z26AN4AlYK0AkC9wpysCz+ZHAxUkEjC5cglG4yg17SSs1Bp6dQLddoPeQHPcRC7amtVnvLrIXFXIi9WjNardGEJlop6WXhhGA0mU7qGKbdcQvBuNN9SGxUS6y1Xs1ZCKl5L5zUaxnq0VbOQXifyj+HINqFghzR6eSdQ6gbgiBGNK6xp/0ffALtL+uRRWwo8DzAAAAAAElFTkSuQmCC"/>
@@ -26,26 +26,27 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                     label.form__label=guests
                     .form__selects
                         .position__relative
-                            select#adult.form__input.form__input-select(name="adult")
-                                option(value="" disabled selected)='1 adult'
-                                each option in [1,2,3,4,5]  
-                                    option(value=option)=option 
+                            select#adult.form__input.form__input-select(name="adult" required)
+                                option(value="1"  selected)='1 adult'
+                                each option in [2,3,4,5]  
+                                    option(value=option)=option + ' adults'
                             span.form__icon.form__icon-arrow
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="7" viewBox="0 0 12 7">
                                     <image id="Vector_Smart_Object_copy_9" data-name="Vector Smart Object copy 9" width="12" height="7" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAcElEQVQYlX3OQQmAQBBG4ScYwAbePFthk5jBJEZYGxjBCkYQDKAR5JdZGJfVuSzDfA+2OtruBEZg5n+irrXhaPQr0r0HgoKESlEDLPYG4FLg0eR2odX2B6cvpRHaDAkPOc4DjQIBRXuOS4GPFLwwwA3TPxjgNhDc4gAAAABJRU5ErkJggg=="/>
                                 </svg>
                         .position__relative
-                            select#child.form__input.form__input-select(name="child") 
-                                option(value="" disabled selected)='1 child' 
+                            select#child.form__input.form__input-select(name="child" ) 
+                                option(value="0"  selected)='0 child' 
                                 each option in [1,2,3,4,5]  
-                                    option(value=option)=option
+                                    - var text = option == 1 ? ' child' : ' children'
+                                    option(value=option)=option + text
                             span.form__icon.form__icon-arrow
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="7" viewBox="0 0 12 7">
                                     <image id="Vector_Smart_Object_copy_9" data-name="Vector Smart Object copy 9" width="12" height="7" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAcElEQVQYlX3OQQmAQBBG4ScYwAbePFthk5jBJEZYGxjBCkYQDKAR5JdZGJfVuSzDfA+2OtruBEZg5n+irrXhaPQr0r0HgoKESlEDLPYG4FLg0eR2odX2B6cvpRHaDAkPOc4DjQIBRXuOS4GPFLwwwA3TPxjgNhDc4gAAAABJRU5ErkJggg=="/>
                                 </svg> 
                 p.form__description=description
                 .form__submit 
-                    button.form__button.form__button-red=submit
+                    button(type="submit").form__button.form__button-red=submit
             .form__link
                 a.form__linkText(href="/")=link
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="13" viewBox="0 0 24 13">

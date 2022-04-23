@@ -1,13 +1,16 @@
-.service{
+.card{
     padding: size(3) size(2);
     
     &__seccion{
         padding: size(2) 0;
         text-align: center;
+        @include montBold();
     }
 
     &__title{
         padding: size(1) 0;
+        color: $gray;
+        @include playRegular();
     }
 
     &__description{
@@ -16,10 +19,13 @@
 
     &__btn{
         color: $red;
-        border: 1px solid $red;
+        border: 2px solid $red;
         padding: size(1) size(2);
-        width: 40%;
+        width: 50%;
         margin-bottom: size(2);
+        background: transparent;
+        @include montSemi();
+        font-size: rem(fontSize(2));
     }
 
     &__img{

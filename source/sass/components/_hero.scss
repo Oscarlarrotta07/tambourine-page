@@ -4,20 +4,25 @@
     padding: 0 size(3) size(2);
     color: $white;
 
+    &__content{
+        background-color: $bg-black;
+
+        @media ($mediaLarge) {
+            transform: translateY(-170px);
+          }
+    }
 
     &__title{
         padding: size(2) 0;
         font-size: size(3.5);
         border-top: 2px solid $white;
         white-space: pre-wrap;
+        @include playRegular();
 
         .hero__subtitle{
             display: block;
             font-size: size(2.5);
-    
+            @include playRegular();
         }
-
     }
-
-   
 }

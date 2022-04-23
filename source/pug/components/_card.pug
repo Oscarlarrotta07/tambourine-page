@@ -1,9 +1,10 @@
 mixin card(data)
-    .service.bg-gray 
-        .service__content 
-            h3.service__seccion=data.seccion
-            h2.service__title=data.title
-            p.service__description=data.description
-            button.service__btn=data.btn
-        figure.service__figure 
-            img.service__img(src=data.image, alt="image-service")
+    .card.bg-gray 
+        .card__content 
+            h3.card__seccion=data.seccion
+            h2.card__title=data.title
+            p.card__description=data.description
+            .text__center
+                button.card__btn=data.btn
+        figure.card__figure 
+            img.card__img(src=data.image, alt="image-card")

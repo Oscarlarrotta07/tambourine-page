@@ -21,13 +21,13 @@
 
     &::before{
         content: "PORTLAND, MAINE";
-        content: "PORTLAND, MAINE";
         z-index: 111111;
         position: absolute;
         left: 10px;
         top: 50%;
         transform: translate(0, -50%);
-        font-size: size(1.5);
+        font-size: rem(fontSize());
+        @include montSemi();
     }
 
     &::after{

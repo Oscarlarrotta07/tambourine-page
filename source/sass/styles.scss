@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
   }
 
 .wrapper{
@@ -19,10 +20,11 @@
 
 .events{
     // display: flex;
+    padding: size(3) size(2);
     
     .title{
         text-align: center;
-        padding: size(2.5) 0;
+        padding-bottom: size(3);
     }
 }
 
@@ -45,4 +47,8 @@
 .position__relative{
     position: relative;
     width: 100%;
+}
+
+.text__center{
+    text-align: center;
 }

@@ -59,15 +59,37 @@
         body.classList.toggle('disabledScroll');
     }
 
-    window.addEventListener('load', function () {
-        document.getElementById('date').addEventListener('blur', function () {
-            document.getElementById('date').type = 'text';
-        });
-        document.getElementById('date').addEventListener('focus', function () {
-            document.getElementById('date').type = 'date';
-        });
+    function getMinDate(days) {
+        let today = new Date();
+        let date = today.getDate() + days;
+        let month = today.getMonth() + 1;
+        const year = today.getFullYear();
 
-    });
+        if (date < 10) {
+            date = '0' + date
+        }
+
+        if (month < 10) {
+            month = '0' + month
+        }
+
+        today = year + '-' + month + '-' + date;
+
+        return today
+    }
+
+    document.getElementById("arrival").setAttribute("min", getMinDate(0));
+    document.getElementById("departure").setAttribute("min", getMinDate(1));
+
+    // submit form    
+    form.onsubmit = submit;
+    function submit() {
+        console.log('oscar');
+        return false
+    }
+
+
 })();
+
 
 
