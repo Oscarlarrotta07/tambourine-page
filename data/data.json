@@ -1,4 +1,14 @@
 {
+    "form": {
+        "tab": "BOOK NOW",
+        "title": "BOOK NOW",
+        "arrival": "ARRIVAL DATE",
+        "departure": "DEPARTURE DATE",
+        "guests": "GUESTS",
+        "description": "GET READY!  You are about to get our best price. Guaranteed",
+        "submit": "LET'S GO",
+        "link": "OR,BOOK YOUR GROUP"
+    },
     "hero": {
         "title": "HISTORY IN THE MAKING.",
         "subtitle": "Portland's newest boutique hotel.",

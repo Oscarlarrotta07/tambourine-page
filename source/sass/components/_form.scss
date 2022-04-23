@@ -1,0 +1,120 @@
+.form{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 40;
+    max-width: 300px;
+
+    &__close{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: size();
+        color: $red;
+        font-size: size(3);
+    }
+
+    &__title{
+        text-align: center;
+        padding: size(4) 0;
+    }
+
+    &__content{
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        background: $black;
+        color: $white;
+        position: relative;
+
+    }
+
+    &__label{
+        padding: size(1) 0;
+    }
+
+    &__input{
+        width: 100%;
+        padding: size();
+        appearance: none;
+
+        &-date::-webkit-calendar-picker-indicator {
+            background: none;
+
+        }
+    }
+    
+    &__icon{
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &-arrow{
+            left: 80%;
+
+        }
+        
+    }
+
+    &__selects{
+        display: flex;
+        gap: size(4);
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        padding: size(2) 0;
+    }
+
+    &__description{
+        text-align: center;
+        padding: size(2) 0;
+    }
+
+    &__submit{
+        text-align: center;
+        margin-bottom: size(4);
+    }
+
+    &__button{
+        color: $white;
+        background: $black;
+        border: none;
+        padding: size();
+
+        &-red{
+            border: 2px solid $red;
+            color: $red;
+        }
+    }
+
+    &__link{
+        text-align: center;
+
+        &Text{
+            color: $gray;
+            text-decoration: none;
+        }
+        svg{
+            margin-left: size();
+
+        }
+    }
+
+    
+}
+
+.form.show{
+
+    .form__content{
+        // transition: height auto 3s;
+        max-height: 600px;
+        transition: max-height 0.5s ease-in;
+        padding: size(2) size(4);
+        z-index: 20;
+
+    }
+
+}

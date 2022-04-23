@@ -38,6 +38,36 @@
     }
 
     setInterval(nextSlideAuto, 8000);
+
+    //form
+    const form = document.getElementById('form');
+    const btnTab = document.getElementById('form-tab');
+    const body = document.getElementById('body');
+    const btnClose = document.getElementById('form-close');
+
+    btnTab.addEventListener('click', () => {
+        toggleForm();
+    });
+
+    btnClose.addEventListener('click', () => {
+        toggleForm();
+
+    });
+
+    function toggleForm() {
+        form.classList.toggle('show');
+        body.classList.toggle('disabledScroll');
+    }
+
+    window.addEventListener('load', function () {
+        document.getElementById('date').addEventListener('blur', function () {
+            document.getElementById('date').type = 'text';
+        });
+        document.getElementById('date').addEventListener('focus', function () {
+            document.getElementById('date').type = 'date';
+        });
+
+    });
 })();
 
 

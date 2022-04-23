@@ -27,6 +27,7 @@
     }
     .month{
         font-size: 14px;
-        transform: rotatez(-450deg);
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
     }
 }
