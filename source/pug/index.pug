@@ -6,11 +6,7 @@ body#body
     +slider()
     +hero(data.hero)
     +card(data.card)
-    .events
-        .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
-        .event__list
-            each event in data.events 
-                +event(event)
+    +events(data.secEvents)
     +footer(data.footer)
     +form(data.form)
     +scripts()
