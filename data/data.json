@@ -23,28 +23,28 @@
     },
     "events": [
         {
-            "day": "1",
-            "month": "ene",
+            "day": "8",
+            "month": "nov",
             "background": "/images/event1.jpg"
         },
         {
-            "day": "2",
-            "month": "oct",
+            "day": "16",
+            "month": "nov",
             "background": "/images/event2.jpg"
         },
         {
-            "day": "23",
+            "day": "2",
             "month": "nov",
             "background": "/images/event3.jpg"
         },
         {
-            "day": "24",
+            "day": "3",
             "month": "dic",
             "background": "/images/event4.jpg"
         }
     ],
     "footer": {
-        "direccion": "390 congress St. (at Congress & Exchange Streets), Portiand Maine  . Map",
-        "adress": "(207)653.9990 . info@portiandpresshotel.com "
+        "direccion": "390 Congress St. (at Congress & Exchange Streets), Portland, Maine  •  MAP >",
+        "adress": "(207) 653.9990  •  info@portlandpresshotel.com"
     }
 }

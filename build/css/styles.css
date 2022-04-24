@@ -48,6 +48,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  font-weight: bold;
 }
 .event .day {
   font-size: 50px;
@@ -57,18 +58,18 @@
   justify-content: flex-end;
 }
 .event .month {
-  width: 100%;
-  font-size: 14px;
+  width: 50%;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   display: flex;
   align-items: center;
+  font-size: 1.1375rem;
 }
 
 @media (min-width:576px) {
   .event__list {
     display: flex;
-    gap: 40px;
+    gap: 24px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -439,6 +440,7 @@
 .events .title {
   text-align: center;
   padding-bottom: 24px;
+  font-weight: 500;
 }
 
 .disabledScroll {
