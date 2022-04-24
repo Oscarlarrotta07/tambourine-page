@@ -1,10 +1,14 @@
 mixin form({tab, title, arrival, departure, guests, description, submit, link})
+    include _svgs
+
     .form#form 
+
         .form__tab  
             button#form-tab.form__button.form__button-tab
                 span=tab  
         .form__content
-            button#form-close.form__close='X' 
+            button#form-close.form__close
+                 +svgs('x')
             h3.form__title=title 
             form#form-inputs 
                 .form__group 
@@ -12,17 +16,13 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                     .position__relative
                         input#arrival.form__input.form__input-date(type="date"  min="" required)
                         span.form__icon 
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17" viewBox="0 0 16 17">
-                                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="16" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAABI0lEQVQ4jZWT0U3DQBBEX1D+oQP8xXfowK4AqMChA1wBooKICuISoII4FWA6sEQD7iBopdloYiyFjGQ5t3cZz8zuLX5u7xBugA1QAD3QcIo1UAMj8Kw3S6DUsQfgEWiBF+AbGIxiq71Sv9+jGAoOdqgDKuDAPCoRvObuld6x8Tb5S9QWeiqrX9uHjgTId7B/ae3yO3neyt4+N5Z26AN4AlYK0AkC9wpysCz+ZHAxUkEjC5cglG4yg17SSs1Bp6dQLddoPeQHPcRC7amtVnvLrIXFXIi9WjNardGEJlop6WXhhGA0mU7qGKbdcQvBuNN9SGxUS6y1Xs1ZCKl5L5zUaxnq0VbOQXifyj+HINqFghzR6eSdQ6gbgiBGNK6xp/0ffALtL+uRRWwo8DzAAAAAAElFTkSuQmCC"/>
-                            </svg>
+                            +svgs('calendar')
                 .form__group 
                     label.form__label(for="departure")=departure
                     .position__relative
                         input#departure.form__input.form__input-date(type="date"   required)
                         span.form__icon 
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17" viewBox="0 0 16 17">
-                                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="16" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAABI0lEQVQ4jZWT0U3DQBBEX1D+oQP8xXfowK4AqMChA1wBooKICuISoII4FWA6sEQD7iBopdloYiyFjGQ5t3cZz8zuLX5u7xBugA1QAD3QcIo1UAMj8Kw3S6DUsQfgEWiBF+AbGIxiq71Sv9+jGAoOdqgDKuDAPCoRvObuld6x8Tb5S9QWeiqrX9uHjgTId7B/ae3yO3neyt4+N5Z26AN4AlYK0AkC9wpysCz+ZHAxUkEjC5cglG4yg17SSs1Bp6dQLddoPeQHPcRC7amtVnvLrIXFXIi9WjNardGEJlop6WXhhGA0mU7qGKbdcQvBuNN9SGxUS6y1Xs1ZCKl5L5zUaxnq0VbOQXifyj+HINqFghzR6eSdQ6gbgiBGNK6xp/0ffALtL+uRRWwo8DzAAAAAAElFTkSuQmCC"/>
-                            </svg>
+                            +svgs('calendar')
                 .form__group 
                     label.form__label=guests
                     .form__selects
@@ -32,9 +32,7 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                                 each option in [2,3,4,5]  
                                     option(value=option)=option + ' adults'
                             span.form__icon.form__icon-arrow
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="7" viewBox="0 0 12 7">
-                                    <image id="Vector_Smart_Object_copy_9" data-name="Vector Smart Object copy 9" width="12" height="7" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAcElEQVQYlX3OQQmAQBBG4ScYwAbePFthk5jBJEZYGxjBCkYQDKAR5JdZGJfVuSzDfA+2OtruBEZg5n+irrXhaPQr0r0HgoKESlEDLPYG4FLg0eR2odX2B6cvpRHaDAkPOc4DjQIBRXuOS4GPFLwwwA3TPxjgNhDc4gAAAABJRU5ErkJggg=="/>
-                                </svg>
+                                +svgs('dropdown')
                         .position__relative
                             select#child.form__input.form__input-select(name="child" ) 
                                 option(value="0"  selected)='0 child' 
@@ -42,9 +40,7 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                                     - var text = option == 1 ? ' child' : ' children'
                                     option(value=option)=option + text
                             span.form__icon.form__icon-arrow
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="7" viewBox="0 0 12 7">
-                                    <image id="Vector_Smart_Object_copy_9" data-name="Vector Smart Object copy 9" width="12" height="7" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAYAAAA8sqwkAAAAcElEQVQYlX3OQQmAQBBG4ScYwAbePFthk5jBJEZYGxjBCkYQDKAR5JdZGJfVuSzDfA+2OtruBEZg5n+irrXhaPQr0r0HgoKESlEDLPYG4FLg0eR2odX2B6cvpRHaDAkPOc4DjQIBRXuOS4GPFLwwwA3TPxjgNhDc4gAAAABJRU5ErkJggg=="/>
-                                </svg> 
+                                +svgs('dropdown')
                 p.form__description=description
                 .form__submit 
                     button(type="submit").form__button.form__button-red=submit
@@ -55,10 +51,7 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                     | if you want make other reserve click on "OR,BOOK YOUR GROUP"
             .form__link
                 a.form__linkText(href="/")=link
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="13" viewBox="0 0 24 13">
-                        <image id="Vector_Smart_Object_copy_6" data-name="Vector Smart Object copy 6" width="24" height="13" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAANCAYAAACzbK7QAAAAj0lEQVQ4jbXTsQkCURCE4U95BVwJ2oF2oKVYgpUYGj4Dc0vQErQCLeFKkAcrKHdme5Ms7ML8sMPMjvUsQSvcx2zmGe644jAlYIkN6lSAHtt41Q8kC/AXkgkYhRQ8sUgGCcijREDZqgE4lWTjDpeY7VV9ZgZd9OGFdeSRFvLHvLV5933IbPLAvCkrgz1ugy3eEd8Yy1/7um8AAAAASUVORK5CYII="/>
-                    </svg>
-            
+                    +svgs('longarrow')
             .form__background
             
         

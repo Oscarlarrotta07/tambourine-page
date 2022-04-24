@@ -1,4 +1,5 @@
 mixin slider()
+    include _svgs
     .slider     
         .slide  
             img(src="/images/Slider1.jpg", alt="")
@@ -9,11 +10,8 @@ mixin slider()
         .slide  
             img(src="/images/Slider4.jpg", alt="")
         button.btn.btn__prev
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="56" viewBox="0 0 30 56">
-                <image id="Vector_Smart_Object_copy_8" data-name="Vector Smart Object copy 8" width="30" height="56" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA4CAYAAADqxUiJAAABSElEQVRYhcXZi22DMBAG4L9RBsgK3YARmk3oBukG3SAjkA2aDTICoyQbOHKKJXQxxr4XJyFkc+jjBBYGf4QQ4BQHAF8Ari8uwg7bIYQwhv/ooudRcaz0BqCb2g8An9bVzitN0b+K3QK1hIuoFZxDzzTPAx1yuZugmnATqgU3oxowC9WABw4qhdmoBBahXFiMcmAVtBVWQ1tgiv5J0FqYouM0fk1hE3QNNkNLsCm6BJujOfjXA6Vw74XOYVc0we5ogu8EPlmjCe4yeO8Bb4LPG6447XDDc50u+NIBit/TB7U1bI6vJZjhNUkmeG2iOt6SrIq3ntCRYcbGOVdL32YsnHuPxDj74ZDiEliES2E2rgEv4cXpkxacw4tzN024CdeGq3ELuAq3gldxS7iIW8OYfhm/4TuHBZgfABfauXeAY3xP+7ggcgTweAII+CKKAH/TJgAAAABJRU5ErkJggg=="/>
-            </svg>
+            +svgs('arrow-prev')
         button.btn.btn__next
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="56" viewBox="0 0 30 56">
-                <image id="Vector_Smart_Object_copy_7" data-name="Vector Smart Object copy 7" color="red" width="30" height="56" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA4CAYAAADqxUiJAAABS0lEQVRYhcXZjW3DIBAF4NeoA3iEjuAVskFHSDdIJko28QjpBu0G6QZXoWCJIv65dz0JyRjQB9iWsXkREQBY8YxPWIWIrCLy8MkdwyK5ET8ALH6cPwCOFiM/ALgEedeBLZh6XvhpPcnfoE97mInxLxFZLOAUfmfhqZMmeK6AjpcKqXitAg1vqXRm4K0Vr9p4T2VVvLeBGj7SWxV89BpN48M3RwY3gVP41QoexjXgIVwL7sY14S5cG27GGTD8o1XEWfBSw1lwFWfCRZwNu/QewW7N/sZG9++yEF3ZI86iTLiIsuAqyoCbUG24GdWEY1T8Y5Rtw0JPtXb/gs7Cw+gMPIWOwtPoCJx623SjvbAa2gOroq2wOtoCU9AaTENLcAo9a6E5uLo0ZcAmaAyboSFsiu6wObrDmzXqktsa+A5+/98AfFjsw7xGkAkKAL9EXcbYPP8XwgAAAABJRU5ErkJggg=="/>
-            </svg>
+            +svgs('arrow-next')
+
         
