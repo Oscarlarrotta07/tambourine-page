@@ -20,13 +20,16 @@
 .footer__text {
   margin-bottom: 8px;
 }
-@media (min-width:992px) {
+
+@media (min-width:1200px) {
+  .footer {
+    padding: 32px 16px;
+  }
   .footer__content {
     display: flex;
     justify-content: space-between;
   }
 }
-
 .event {
   display: flex;
   justify-content: center;
@@ -48,6 +51,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  font-weight: bold;
 }
 .event .day {
   font-size: 50px;
@@ -57,14 +61,23 @@
   justify-content: flex-end;
 }
 .event .month {
-  width: 100%;
-  font-size: 14px;
+  width: 50%;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   display: flex;
   align-items: center;
+  font-size: 1.1375rem;
 }
 
+@media (min-width:576px) {
+  .event__list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .card {
   padding: 24px 16px;
 }
@@ -92,12 +105,49 @@
   background: transparent;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: rem(fontSize(2));
 }
 .card__img {
   width: 100%;
 }
 
+@media (min-width:576px) {
+  .card {
+    display: flex;
+    align-items: center;
+  }
+  .card__content {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+@media (min-width:1200px) {
+  .card {
+    display: flex;
+    align-items: flex-start;
+    padding: 64px 0;
+  }
+  .card__seccion {
+    padding-bottom: 16px;
+  }
+  .card__title {
+    font-size: 2.03125rem;
+    padding-bottom: 16px;
+  }
+  .card__img {
+    width: 620px;
+  }
+  .card__description {
+    padding-bottom: 48px;
+    font-size: 0.89375rem;
+  }
+  .card__btn {
+    margin: 0;
+  }
+  .card .text__center {
+    text-align: inherit;
+  }
+}
 .hero {
   background-color: #000000;
   text-align: center;
@@ -107,26 +157,49 @@
 .hero__content {
   background-color: #000000;
 }
-@media (min-width:992px) {
-  .hero__content {
-    transform: translateY(-170px);
-  }
+.hero__description {
+  font-size: 0.65rem;
 }
 .hero__title {
   padding: 16px 0;
-  font-size: 28px;
+  font-size: 8px;
   border-top: 2px solid #ffffff;
   white-space: pre-wrap;
+  font-size: 1.625rem;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
 }
 .hero__title .hero__subtitle {
   display: block;
-  font-size: 20px;
+  font-size: 1.21875rem;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
 }
 
+@media (min-width:1200px) {
+  .hero {
+    height: 210px;
+  }
+  .hero__padding {
+    padding: 0 80px;
+  }
+  .hero__title {
+    font-size: 3.25rem;
+    border-top: 4px solid #ffffff;
+    padding-top: 24px;
+  }
+  .hero__title .hero__subtitle {
+    font-size: 2.4375rem;
+    padding-bottom: 24px;
+  }
+  .hero__description {
+    font-size: 0.975rem;
+  }
+  .hero__content {
+    padding: 0 96px;
+    transform: translateY(-180px);
+  }
+}
 .slider {
   width: 100%;
   height: 350px;
@@ -165,21 +238,28 @@
   top: 0;
   left: 0;
 }
+.btn__prev {
+  top: 45%;
+  left: 2%;
+}
+.btn__next {
+  top: 45%;
+  right: 2%;
+}
 
 .btn:active {
   transform: scale(1.1);
 }
 
-.btn-prev {
-  top: 45%;
-  left: 2%;
-}
+@media (min-width:1200px) {
+  .slider {
+    height: 800px;
+  }
 
-.btn-next {
-  top: 45%;
-  right: 2%;
+  .slide {
+    height: 800px;
+  }
 }
-
 .header {
   position: absolute;
   width: 100%;
@@ -206,7 +286,7 @@
   left: 10px;
   top: 50%;
   transform: translate(0, -50%);
-  font-size: 0.5rem;
+  font-size: rem(fontSize());
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -225,6 +305,15 @@
   opacity: 0.8;
 }
 
+@media (min-width:1200px) {
+  .header {
+    height: 208px;
+    margin-top: 48px;
+  }
+  .header::after {
+    height: 100px;
+  }
+}
 .form {
   position: fixed;
   width: 100%;
@@ -321,7 +410,6 @@
   text-align: center;
   padding: 32px 0;
 }
-
 .form.show .form__content {
   max-height: 600px;
   transition: max-height 0.5s ease-in;
@@ -332,6 +420,38 @@
   display: none;
 }
 
+@media (min-width:1200px) {
+  .form {
+    display: flex;
+    left: calc(100% - 36px);
+    right: 0;
+    top: 80px;
+    width: 320px;
+  }
+  .form__button span {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 8px;
+  }
+  .form__button-tab {
+    padding: 0;
+  }
+  .form__succesful {
+    padding: 32px 0 96px;
+  }
+  .form.show {
+    left: calc(100% - 320px);
+  }
+  .form.show .form__content {
+    max-width: 320px;
+    transition: max-width 0.5s ease-in;
+    padding: 16px 32px;
+    z-index: 20;
+  }
+  .form.show .form__tab {
+    display: none;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -354,6 +474,7 @@
 .events .title {
   text-align: center;
   padding-bottom: 24px;
+  font-weight: 500;
 }
 
 .disabledScroll {

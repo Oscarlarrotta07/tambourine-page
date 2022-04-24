@@ -20,6 +20,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        font-weight: bold;
     }
 
     .day{
@@ -31,11 +32,28 @@
 
     }
     .month{
-        width: 100%;
-        font-size: 14px;
+        width: 50%;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         display: flex;
         align-items: center;
+        font-size: ptToRem(14);
     }
+}
+
+@media ($mediaMin) {
+    .event{
+        &__list{
+            display: flex;
+            gap: size(3);
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media ($mediaLarge) {
+
+
 }

@@ -31,4 +31,56 @@
     &__img{
         width: 100%;
     }
+
+    
 }
+@media ($mediaMin) {
+    .card{
+        display: flex;
+        align-items: center;
+        
+        &__content{
+            width: 100%;
+            padding: 0 size(3);
+        }
+    }
+}
+
+@media ($mediaLarge) {
+    .card{
+        display: flex;
+        align-items: flex-start;
+        padding: size(8) 0;
+
+        &__seccion{
+            padding-bottom:size(2);
+
+        }
+
+        &__title{
+            font-size: ptToRem(25);
+            padding-bottom:size(2);
+
+        }
+        
+        &__img{
+            width: 620px;
+        }
+
+        &__description{
+            padding-bottom:size(6);
+            font-size: ptToRem(11);
+
+        }
+
+        &__btn{
+            margin: 0;
+        }
+
+        .text__center{
+            text-align: inherit;
+        }
+    }
+}
+
+

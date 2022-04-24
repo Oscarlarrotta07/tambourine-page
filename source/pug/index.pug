@@ -8,8 +8,9 @@ body#body
     +card(data.card)
     .events
         .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
-        each event in data.events 
-            +event(event)
+        .event__list
+            each event in data.events 
+                +event(event)
     +footer(data.footer)
     +form(data.form)
     +scripts()

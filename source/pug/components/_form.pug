@@ -1,7 +1,8 @@
 mixin form({tab, title, arrival, departure, guests, description, submit, link})
     .form#form 
         .form__tab  
-            button#form-tab.form__button.form__button-tab=tab  
+            button#form-tab.form__button.form__button-tab
+                span=tab  
         .form__content
             button#form-close.form__close='X' 
             h3.form__title=title 

@@ -12,39 +12,39 @@
     "hero": {
         "title": "HISTORY IN THE MAKING.",
         "subtitle": "Portland's newest boutique hotel.",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "description": "Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec. Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore"
     },
     "card": {
         "seccion": "ACCOMMODATIONS",
         "title": "HOLLYWOOD,MEET INDUSTRIAL CHIC",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+        "description": "Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.",
         "image": "/images/room.jpg",
         "btn": "VIEW ROOMS"
     },
     "events": [
         {
-            "day": "1",
-            "month": "ene",
+            "day": "8",
+            "month": "nov",
             "background": "/images/event1.jpg"
         },
         {
-            "day": "2",
-            "month": "oct",
+            "day": "16",
+            "month": "nov",
             "background": "/images/event2.jpg"
         },
         {
-            "day": "23",
+            "day": "2",
             "month": "nov",
             "background": "/images/event3.jpg"
         },
         {
-            "day": "24",
+            "day": "3",
             "month": "dic",
             "background": "/images/event4.jpg"
         }
     ],
     "footer": {
-        "direccion": "390 congress St. (at Congress & Exchange Streets), Portiand Maine  . Map",
-        "adress": "(207)653.9990 . info@portiandpresshotel.com "
+        "direccion": "390 Congress St. (at Congress & Exchange Streets), Portland, Maine  •  MAP >",
+        "adress": "(207) 653.9990  •  info@portlandpresshotel.com"
     }
 }
