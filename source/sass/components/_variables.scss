@@ -1,0 +1,29 @@
+$red:#E21F25;
+$white:#ffffff;
+$black:#282930;
+$gray:#979Fa4;
+$bg-gray:#F1F2F2;
+$bg-black:#000000;
+$mediaMin: "min-width:576px";
+$mediaLarge: "min-width:1200px";
+$maxWith: 1080px;
+
+
+@font-face {
+    font-family: 'play-fair-regular';
+    src: url('/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'monstserrat-regular';
+    src: url('/fonts/Montserrat_Font/Montserrat-Regular.ttf');
+  }
+
+@font-face {
+font-family: 'monstserrat-semibold';
+src: url('./fonts/Montserrat_Font/Montserrat-SemiBold.ttf') format('ttf');
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');

@@ -1,0 +1,59 @@
+.event{
+    display: flex;
+    justify-content: center;
+    margin-bottom: size(2);
+    position: relative;
+
+    &__img{
+        width: 100%;
+    }
+
+    &__date{
+        margin-top: 1px;
+        width: 95px;
+        height: 55px;
+        background: $black;
+        color: $white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: bold;
+    }
+
+    .day{
+        font-size: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+    .month{
+        width: 50%;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        display: flex;
+        align-items: center;
+        font-size: ptToRem(14);
+    }
+}
+
+@media ($mediaMin) {
+    .event{
+        &__list{
+            display: flex;
+            gap: size(3);
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media ($mediaLarge) {
+
+
+}

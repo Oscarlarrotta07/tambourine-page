@@ -1,1 +1,50 @@
-{}
+{
+    "form": {
+        "tab": "BOOK NOW",
+        "title": "BOOK NOW",
+        "arrival": "ARRIVAL DATE",
+        "departure": "DEPARTURE DATE",
+        "guests": "GUESTS",
+        "description": "GET READY!  You are about to get our best price. Guaranteed",
+        "submit": "LET'S GO",
+        "link": "OR,BOOK YOUR GROUP"
+    },
+    "hero": {
+        "title": "HISTORY IN THE MAKING.",
+        "subtitle": "Portland's newest boutique hotel.",
+        "description": "Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec. Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore"
+    },
+    "card": {
+        "seccion": "ACCOMMODATIONS",
+        "title": "HOLLYWOOD,MEET INDUSTRIAL CHIC",
+        "description": "Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.",
+        "image": "/images/room.jpg",
+        "btn": "VIEW ROOMS"
+    },
+    "events": [
+        {
+            "day": "8",
+            "month": "nov",
+            "background": "/images/event1.jpg"
+        },
+        {
+            "day": "16",
+            "month": "nov",
+            "background": "/images/event2.jpg"
+        },
+        {
+            "day": "2",
+            "month": "nov",
+            "background": "/images/event3.jpg"
+        },
+        {
+            "day": "3",
+            "month": "dic",
+            "background": "/images/event4.jpg"
+        }
+    ],
+    "footer": {
+        "direccion": "390 Congress St. (at Congress & Exchange Streets), Portland, Maine  •  MAP >",
+        "adress": "(207) 653.9990  •  info@portlandpresshotel.com"
+    }
+}

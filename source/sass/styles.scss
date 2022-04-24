@@ -1,0 +1,59 @@
+@import "components/variables","components/mixins","components/footer",
+"components/event","components/card","components/hero","components/slider",
+"components/header","components/form";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.wrapper{
+    max-width: $maxWith;
+    margin: 0 auto;
+}
+
+.bg-gray{
+    background-color: $bg-gray;
+}
+
+.events{
+    // display: flex;
+    padding: size(3) size(2);
+    
+    .title{
+        text-align: center;
+        padding-bottom: size(3);
+        font-weight: 500;
+    }
+}
+
+.disabledScroll{
+    overflow: hidden;
+
+    &::after{
+        content: "";
+        position: fixed;
+        background-color: $black;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.8;
+        z-index: 10;
+    }
+}
+
+.position__relative{
+    position: relative;
+    width: 100%;
+}
+
+.text__center{
+    text-align: center;
+}
+
+.displayNone{
+    display: none;
+}

@@ -1,0 +1,18 @@
+include components/_meta
+
++meta() 
+body#body
+    +header()
+    +slider()
+    +hero(data.hero)
+    +card(data.card)
+    .events
+        .title="THIS MONTH'S MOST ANTICIPATED EVENTS"
+        .event__list
+            each event in data.events 
+                +event(event)
+    +footer(data.footer)
+    +form(data.form)
+    +scripts()
+
+    

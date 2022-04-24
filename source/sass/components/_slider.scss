@@ -1,0 +1,63 @@
+  
+  .slider {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden; /* <===  */
+  }
+  
+  .slide {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 30px;
+    height: 56px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 18px;
+    background: transparent;
+
+    svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__prev{
+      top: 45%;
+      left: 2%;
+    }
+
+    &__next{
+      top: 45%;
+      right: 2%;
+    }
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+
+  @media ($mediaLarge) {
+    
+    .slider {
+      height: 800px;
+
+    }
+    .slide{
+      height: 800px;
+    }
+}

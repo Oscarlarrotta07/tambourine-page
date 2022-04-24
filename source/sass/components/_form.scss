@@ -1,0 +1,181 @@
+.form{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 40;
+
+    &__close{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: size();
+        color: $red;
+        font-size: size(3);
+        background-color: $black;
+        border: none;
+    }
+
+    &__title{
+        text-align: center;
+        padding: size(4) 0;
+    }
+
+    &__content{
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        background: $black;
+        color: $white;
+        position: relative;
+
+    }
+
+    &__label{
+        padding: size(1) 0;
+    }
+
+    &__input{
+        width: 100%;
+        padding: size();
+        appearance: none;
+
+        &-date::-webkit-calendar-picker-indicator {
+            background: none;
+
+        }
+    }
+    
+    &__icon{
+        position: absolute;
+        left: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        
+        &-arrow{
+            left: 80%;
+
+        }
+        
+    }
+
+    &__selects{
+        display: flex;
+        gap: size(4);
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        padding: size(2) 0;
+    }
+
+    &__description{
+        text-align: center;
+        padding: size(2) 0;
+    }
+
+    &__submit{
+        text-align: center;
+        margin-bottom: size(4);
+    }
+
+    &__button{
+        color: $white;
+        background: $black;
+        border: none;
+        padding: size();
+        width: 100%;
+
+        &-red{
+            border: 2px solid $red;
+            color: $red;
+        }
+
+        &-tab{
+            padding: size(4) 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    &__link{
+        text-align: center;
+
+        &Text{
+            color: $gray;
+            text-decoration: none;
+        }
+        svg{
+            margin-left: size();
+
+        }
+    }
+
+    &__succesful{
+
+        text-align: center;
+        padding: size(4) 0;
+    }
+
+    &.show{
+        .form__content{
+            max-height: 600px;
+            transition: max-height 0.5s ease-in;
+            padding: size(2) size(4);
+            z-index: 20;
+    
+        }
+    
+        .form__tab{
+            display: none;
+        }
+    }
+    
+}
+
+@media ($mediaLarge) {
+    
+    .form{
+        display: flex;
+        left: calc((100% - 36px));
+        right: 0;
+        top: 80px;
+        width: 320px;
+
+        &__button{
+
+            span{
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                padding: size();
+            }
+
+            &-tab{
+                padding: 0;
+            }
+        }
+
+        &__succesful{
+            padding: 32px 0 96px;
+
+        }
+
+        &.show{
+            left: calc((100% - 320px));
+
+            .form__content{
+                max-width: 320px;
+                transition: max-width 0.5s ease-in;
+                padding: size(2) size(4);
+                z-index: 20;
+            }
+
+            .form__tab{
+                display: none;
+            }
+        }
+        
+    }
+
+}
