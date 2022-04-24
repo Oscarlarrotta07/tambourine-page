@@ -9,8 +9,13 @@
         margin-bottom: size(1);
     }
 
-    @media ($mediaLarge) {
-        
+   
+}
+
+@media ($mediaLarge) {
+.footer{    
+    padding: size(4) size(2);
+
         &__content{
             display: flex;
             justify-content: space-between;

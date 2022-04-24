@@ -20,13 +20,16 @@
 .footer__text {
   margin-bottom: 8px;
 }
+
 @media (min-width:1200px) {
+  .footer {
+    padding: 32px 16px;
+  }
   .footer__content {
     display: flex;
     justify-content: space-between;
   }
 }
-
 .event {
   display: flex;
   justify-content: center;
