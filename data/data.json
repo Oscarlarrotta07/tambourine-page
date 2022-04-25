@@ -37,7 +37,7 @@
         "seccion": "ACCOMMODATIONS",
         "title": "HOLLYWOOD,MEET INDUSTRIAL CHIC",
         "description": "Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.",
-        "image": "./images/room.jpg",
+        "image": "./images/Room.jpg",
         "btn": "VIEW ROOMS"
     },
     "secEvents": {
