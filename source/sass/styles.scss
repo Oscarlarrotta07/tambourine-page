@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    @include montMedium()
   }
 
 .wrapper{
@@ -19,13 +19,11 @@
 }
 
 .events{
-    // display: flex;
     padding: size(3) size(2);
     
     .title{
         text-align: center;
         padding-bottom: size(3);
-        font-weight: 500;
     }
 }
 

@@ -9,36 +9,32 @@
 }
 
 @mixin montRegular() {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserrat-regular', sans-serif;
   font-weight: 400;
 }
 
 @mixin montMedium() {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-family: 'montserrat-medium', sans-serif;
 }
 
 @mixin montSemi() {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-family: 'montserrat-semibold', sans-serif;
 }
 
 @mixin montBold() {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'montserrat-bold', sans-serif;
 }
 
 @mixin playRegular() {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'playfair-regular', sans-serif;
   font-weight: 400;
+
 }
 
 @mixin playSemi() {
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 600;
+  font-family: 'playfair-semibold', sans-serif;
 }
 
 @mixin playBold() {
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 700;
+  font-family: 'playfair-bold', sans-serif;
 }
