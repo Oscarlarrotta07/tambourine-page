@@ -50,7 +50,7 @@ Accessibility and usability were taken into account by using semantic HTML for t
  
 #### Responsive 
 
-Since the main purpose of the page is to book a reservation, for Mobile I considered a full-width stick button to make it easy to access to the user. The wide space, the contrast and the animation bring a nice experience to make the access easy to the user booking
+Since the main purpose of the page is to book a reservation, for Mobile I considered a full-width stick button to make it easy to access to the user. The wide space, the contrast and the animation bring a nice experience to make the access easy to the user.
 #### Public version
  
 The public version of the site is using the Github Pages since it is the free version of an static server in the git client I chose: `https://oscarlarrotta07.github.io/tambourine-page/build/`.
