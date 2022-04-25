@@ -10,23 +10,24 @@
     &__title{
         padding: size(1) 0;
         color: $gray;
-        @include playRegular();
+        @include montBold();
     }
 
     &__description{
         padding: size(2) 0;
+        line-height: 16pt;
     }
 
     &__btn{
         color: $red;
         border: 2px solid $red;
-        padding: size(1) size(2);
-        width: 50%;
+        padding: size(1)  ;
+        width: size(23);
         margin-bottom: size(2);
         background: transparent;
         @include montSemi();
         font-size: rem(fontSize(2));
-    }
+    }    
 
     &__img{
         width: 100%;
@@ -58,8 +59,7 @@
         }
 
         &__title{
-            font-size: ptToRem(25);
-            padding-bottom:size(2);
+            font-size: ptToRem(30);
 
         }
         
