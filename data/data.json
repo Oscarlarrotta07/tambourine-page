@@ -1,4 +1,23 @@
 {
+    "header": {
+        "text": "PORTLAND, MAINE"
+    },
+    "slider": {
+        "images": [
+            {
+                "url": "./images/Slider1.jpg"
+            },
+            {
+                "url": "./images/Slider2.jpg"
+            },
+            {
+                "url": "./images/Slider3.jpg"
+            },
+            {
+                "url": "./images/Slider4.jpg"
+            }
+        ]
+    },
     "form": {
         "tab": "BOOK NOW",
         "title": "BOOK NOW",
@@ -27,22 +46,22 @@
             {
                 "day": "8",
                 "month": "nov",
-                "background": "/images/event1.jpg"
+                "image": "./images/event1.jpg"
             },
             {
                 "day": "16",
                 "month": "nov",
-                "background": "/images/event2.jpg"
+                "image": "./images/event2.jpg"
             },
             {
                 "day": "2",
                 "month": "nov",
-                "background": "/images/event3.jpg"
+                "image": "./images/event3.jpg"
             },
             {
                 "day": "3",
                 "month": "dic",
-                "background": "/images/event4.jpg"
+                "image": "./images/event4.jpg"
             }
         ]
     },

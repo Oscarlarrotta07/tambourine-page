@@ -1,6 +1,6 @@
-mixin event(data)
+mixin event({image, day, month})
     .event 
-        img.event__img(src=data.background, alt="")
+        img.event__img(src=image, alt="image-event")
         .event__date
-            .day=data.day
-            .month=data.month    
+            .day=day
+            .month=month    

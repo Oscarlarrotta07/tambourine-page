@@ -1,14 +1,9 @@
-mixin slider()
+mixin slider({images})
     include _svgs
-    .slider     
-        .slide  
-            img(src="/images/Slider1.jpg", alt="")
-        .slide  
-            img(src="/images/Slider2.jpg", alt="")
-        .slide      
-            img(src="/images/Slider3.jpg", alt="")
-        .slide  
-            img(src="/images/Slider4.jpg", alt="")
+    .slider
+        each image in images     
+            .slide  
+                img(src=image.url, alt="image-slider")
         button.btn.btn__prev
             +svgs('arrow-prev')
         button.btn.btn__next

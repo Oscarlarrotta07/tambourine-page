@@ -1,8 +1,8 @@
-mixin header(data)
+mixin header({text})
     include _svgs
 
     header.header
         .wrapper
             +svgs('logo')
-            span.header__text='PORTLAND, MAINE'
+            span.header__text=text
             

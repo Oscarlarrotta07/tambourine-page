@@ -1,11 +1,11 @@
-mixin card(data)
+mixin card({seccion, title, description, btn, image})
     .bg-gray 
         .card.wrapper
             .card__content 
-                h3.card__seccion=data.seccion
-                h2.card__title=data.title
-                p.card__description=data.description
+                h3.card__seccion=seccion
+                h2.card__title=title
+                p.card__description=description
                 .text__center
-                    button.card__btn=data.btn
+                    button.card__btn=btn
             figure.card__figure 
-                img.card__img(src=data.image, alt="image-card")
+                img.card__img(src=image, alt="image-card")
