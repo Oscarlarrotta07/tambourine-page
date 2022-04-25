@@ -43,14 +43,19 @@ mixin form({tab, title, arrival, departure, guests, description, submit, link})
                 p.form__description=description
                 .form__submit 
                     button(type="submit").form__button.form__button-red=submit
+                .form__link
+                    a.form__linkText(href="/")=link
+                        +svgs('longarrow')
             #form-succesful.form__succesful.displayNone
-                h2
-                    | Thank you for preferring us, your reservation is made!,
+                h2.form__succesful-title
+                    | Thank you for preferring us! your reservation was made.
                     br 
-                    | if you want make other reserve click on "OR,BOOK YOUR GROUP"
-            .form__link
-                a.form__linkText(href="/")=link
-                    +svgs('longarrow')
+                    | If you want make another reservation, click on "RESERVE"
+                .form__link
+                    a.form__linkText(href="/")="RESERVE"
+                        +svgs('longarrow')
+
+            
             .form__background
             
         
