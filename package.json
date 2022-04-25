@@ -8,6 +8,7 @@
     "compile_sass": "gulp compileStyles",
     "watch_sass": "gulp watchStyles",
     "watch_js": "gulp watchJs",
+    "dev": "concurrently \"npm run watch_pug\" \"npm run watch_sass\" \"npm run watch_js\" ",
     "serve": "http-server ./build"
   },
   "keywords": [
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "concurrently": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-pug": "^5.0.0",

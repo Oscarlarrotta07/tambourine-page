@@ -18,20 +18,18 @@
         text-align: center;
           
     }
-
-    &::before{
-        content: "PORTLAND, MAINE";
-        z-index: 111111;
+    &__text{
+        z-index: 11;
         position: absolute;
         left: 10px;
         top: 50%;
         transform: translate(0, -50%);
-        font-size: rem(fontSize());
+        font-size: ptToRem(7);
         @include montSemi();
+        padding-left: size();
     }
 
     &::after{
-        // content: "PORTLAND, MAINE";
         content: "";
         width: 100%;
         height: 50px;
@@ -60,5 +58,10 @@
             height: 100px;
     
           }
+
+          &__text{
+            font-size: ptToRem(11);
+            padding-left: size(6);
+        }
     }
 }
