@@ -1,15 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @font-face {
-  font-family: "play-fair-regular";
-  src: url("/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-family: "playfair-regular";
+  src: url("/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
 }
 @font-face {
-  font-family: "monstserrat-regular";
+  font-family: "playfair-semibold";
+  src: url("/fonts/Playfair_Display/PlayfairDisplay-SemiBold.ttf");
+}
+@font-face {
+  font-family: "playfair-bold";
+  src: url("/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: "montserrat-regular";
   src: url("/fonts/Montserrat_Font/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: "monstserrat-semibold";
-  src: url("./fonts/Montserrat_Font/Montserrat-SemiBold.ttf") format("ttf");
+  font-family: "montserrat-medium";
+  src: url("/fonts/Montserrat_Font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "montserrat-semibold";
+  src: url("/fonts/Montserrat_Font/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("/fonts/Montserrat_Font/Montserrat-Bold.ttf");
 }
 .footer {
   padding: 32px 16px 96px;
@@ -84,13 +99,12 @@
 .card__seccion {
   padding: 16px 0;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "montserrat-bold", sans-serif;
 }
 .card__title {
   padding: 8px 0;
   color: #979Fa4;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "playfair-regular", sans-serif;
   font-weight: 400;
 }
 .card__description {
@@ -103,8 +117,7 @@
   width: 50%;
   margin-bottom: 16px;
   background: transparent;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: "montserrat-semibold", sans-serif;
   font-size: rem(fontSize(2));
 }
 .card__img {
@@ -162,17 +175,16 @@
 }
 .hero__title {
   padding: 16px 0;
-  font-size: 8px;
   border-top: 2px solid #ffffff;
   white-space: pre-wrap;
   font-size: 1.625rem;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "playfair-regular", sans-serif;
   font-weight: 400;
 }
 .hero__title .hero__subtitle {
   display: block;
   font-size: 1.21875rem;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "playfair-regular", sans-serif;
   font-weight: 400;
 }
 
@@ -286,8 +298,7 @@
   top: 50%;
   transform: translate(0, -50%);
   font-size: 0.56875rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: "montserrat-semibold", sans-serif;
   padding-left: 8px;
 }
 .header::after {
@@ -337,8 +348,8 @@
 }
 .form__title {
   text-align: center;
-  padding: 24px 0;
-  font-family: "Playfair Display", sans-serif;
+  padding: 24px 0 16px;
+  font-family: "playfair-regular", sans-serif;
   font-weight: 400;
   font-size: 2.4375rem;
 }
@@ -401,7 +412,7 @@
 .form__button-tab {
   padding: 16px 0;
   font-size: 18px;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "playfair-regular", sans-serif;
   font-weight: 400;
   font-size: 1.625rem;
 }
@@ -417,7 +428,9 @@
 }
 .form__succesful {
   text-align: center;
-  padding: 32px 0;
+}
+.form__succesful-title {
+  padding-bottom: 80px;
 }
 .form.show .form__content {
   max-height: 600px;
@@ -449,6 +462,9 @@
   .form__succesful {
     padding: 32px 0 96px;
   }
+  .form__succesful-title {
+    padding-bottom: 160px;
+  }
   .form.show .form__content {
     max-width: 320px;
     transform: translateX(-284px);
@@ -462,7 +478,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat-medium", sans-serif;
 }
 
 .wrapper {
@@ -480,7 +496,6 @@
 .events .title {
   text-align: center;
   padding-bottom: 24px;
-  font-weight: 500;
 }
 
 .disabledScroll {

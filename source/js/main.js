@@ -17,6 +17,10 @@ let interval = null;
             this.setIntervals();
         }
 
+        /**
+         * Function description, nextSlideAuto change image slider for the next 
+         *
+         */
         nextSlideAuto() {
             const self = this;
             if (this.currentSlide === this.maxSlide) {
@@ -28,6 +32,10 @@ let interval = null;
                 slide.style.transform = `translateX(${100 * (index - self.currentSlide)}%)`;
             });
         }
+        /**
+         * Function description, nextSlideAuto change image slider for the previous 
+         *
+         */
 
         prevSlideAuto() {
             const self = this;
@@ -44,6 +52,12 @@ let interval = null;
             this.nextSlideEl.addEventListener("click", this.nextSlideAuto);
             this.prevSlideEl.addEventListener("click", this.prevSlideAuto);
         }
+
+        /**
+         * Function description, setIntervals auto rotate image slider for the next every 8 seconds
+         *
+         */
+
         setIntervals() {
             if (interval) {
                 clearInterval(interval);
@@ -69,17 +83,28 @@ let interval = null;
             this.setMinimums()
 
         }
-
+        /**
+        * Function description, setMinimums set min attribute of input date arrival
+        *
+        */
         setMinimums() {
             this.arrivalEl.setAttribute("min", this.getMinDate());
         }
 
+        /**
+        * Function description, submit show thanks message after submit form
+        *
+        */
         submit() {
             this.formInputsEl.classList.add('displayNone');
             this.formsuccesfulEl.classList.remove('displayNone');
             return false
         }
 
+        /**
+         * Function description, setMinimums set min attribute of input date departure
+         *
+         */
         setMinDeparture() {
             this.departureEl.setAttribute("min", this.arrivalEl.value)
         }
@@ -92,11 +117,19 @@ let interval = null;
             this.formEl.onsubmit = this.submit;
         }
 
+        /**
+         * Function description, toggleForm show and hidden form 
+         *
+         */
         toggleForm() {
             this.formEl.classList.toggle('show');
             this.bodyEl.classList.toggle('disabledScroll');
         }
 
+        /**
+         * Function description, getMinDate get the min date for input arrival 
+         *
+         */
         getMinDate() {
             let today = new Date();
             let date = today.getDate();
