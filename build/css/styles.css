@@ -279,16 +279,16 @@
   width: 100%;
   text-align: center;
 }
-.header::before {
-  content: "PORTLAND, MAINE";
-  z-index: 111111;
+.header__text {
+  z-index: 11;
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translate(0, -50%);
-  font-size: rem(fontSize());
+  font-size: 0.56875rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  padding-left: 8px;
 }
 .header::after {
   content: "";
@@ -313,6 +313,10 @@
   .header::after {
     height: 100px;
   }
+  .header__text {
+    font-size: 0.89375rem;
+    padding-left: 48px;
+  }
 }
 .form {
   position: fixed;
@@ -333,7 +337,10 @@
 }
 .form__title {
   text-align: center;
-  padding: 32px 0;
+  padding: 24px 0;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.4375rem;
 }
 .form__content {
   max-height: 0;
@@ -392,9 +399,11 @@
   color: #E21F25;
 }
 .form__button-tab {
-  padding: 32px 0;
+  padding: 16px 0;
   font-size: 18px;
-  font-weight: bold;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
 }
 .form__link {
   text-align: center;
@@ -435,18 +444,15 @@
   }
   .form__button-tab {
     padding: 0;
+    font-size: 1.05625rem;
   }
   .form__succesful {
     padding: 32px 0 96px;
   }
-  .form.show {
-    left: calc(100% - 320px);
-  }
   .form.show .form__content {
     max-width: 320px;
-    transition: max-width 0.5s ease-in;
-    padding: 16px 32px;
-    z-index: 20;
+    transform: translateX(-284px);
+    transition: transform 0.5s ease-in;
   }
   .form.show .form__tab {
     display: none;

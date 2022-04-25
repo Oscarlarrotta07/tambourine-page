@@ -1,0 +1,7 @@
+mixin events({title, events})
+    include _event
+    .events
+        .title=title
+        .event__list
+            each event in events 
+                +event(event)
