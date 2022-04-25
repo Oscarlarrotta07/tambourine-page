@@ -337,7 +337,7 @@
 }
 .form__title {
   text-align: center;
-  padding: 24px 0;
+  padding: 24px 0 16px;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
   font-size: 2.4375rem;
@@ -417,7 +417,9 @@
 }
 .form__succesful {
   text-align: center;
-  padding: 32px 0;
+}
+.form__succesful-title {
+  padding-bottom: 160px;
 }
 .form.show .form__content {
   max-height: 600px;
